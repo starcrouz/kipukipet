@@ -19,8 +19,8 @@ const Bio: React.FC = () => {
         {/* Modification de la taille : utilisation de max-w-sm pour mobile (contenu) au lieu de w-64 figé */}
         <div className="md:col-span-1 w-full max-w-sm md:max-w-full mx-auto relative group">
           
-          {/* Conteneur avec effet "Vieux Film" : Bordure épaisse, fond noir */}
-          <div className="relative rounded-lg overflow-hidden border-4 border-gray-900 shadow-2xl bg-black transform rotate-1 hover:rotate-0 transition-transform duration-500">
+          {/* Conteneur avec effet "Vieux Film" : Bordure retirée, coins arrondis conservés */}
+          <div className="relative rounded-lg overflow-hidden shadow-2xl bg-black transform rotate-1 hover:rotate-0 transition-transform duration-500">
             
             {/* Vignette pour effet vieilli (ombre intérieure sombre sur les bords) */}
             <div className="absolute inset-0 z-20 pointer-events-none shadow-[inset_0_0_40px_rgba(0,0,0,0.9)]"></div>

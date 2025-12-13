@@ -22,8 +22,8 @@ const Gallery: React.FC = () => {
               <img
                 src={img.src}
                 alt={`Galerie image ${index}`}
-                // Hauteur fixe, largeur auto pour conserver les ratios
-                className="h-64 md:h-96 w-auto rounded-lg shadow-lg border border-gray-700 object-contain hover:scale-105 transition-transform duration-300"
+                // Hauteur fixe, largeur auto pour conserver les ratios. Bordure retirée.
+                className="h-64 md:h-96 w-auto rounded-lg shadow-lg object-contain hover:scale-105 transition-transform duration-300"
               />
             </div>
           ))}
