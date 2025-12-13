@@ -90,6 +90,16 @@
         animation: pan-left-start 30s ease-in-out infinite;
       }
 
+      /* Animation "flottement au vent" pour le footer */
+      @keyframes float-wind {
+        0%, 100% { transform: rotate(-2deg) translateY(0); }
+        50% { transform: rotate(2deg) translateY(-5px); }
+      }
+      .animate-float-wind {
+        animation: float-wind 4s ease-in-out infinite;
+        display: inline-block;
+      }
+
       /* Animation de tremblement (Shake) */
       @keyframes shake {
         0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -107,6 +117,18 @@
       .animate-shake {
         animation: shake 0.5s;
         animation-iteration-count: 1;
+      }
+
+      /* Animation de défilement continu (Marquee) */
+      @keyframes marquee {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-marquee {
+        animation: marquee 60s linear infinite;
+      }
+      .animate-marquee:hover {
+        animation-play-state: paused;
       }
     </style>
   <script type="importmap">

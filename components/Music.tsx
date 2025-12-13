@@ -45,8 +45,9 @@ const Music: React.FC = () => {
       <SectionTitle title="Notre Musique" subtitle="YEAH" />
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Colonne Vidéo */}
-        <div className="md:col-span-2 aspect-w-16 aspect-h-9 rounded-lg shadow-2xl relative group border border-gray-800 bg-black p-2">
-          <div className="w-full h-full overflow-hidden rounded relative">
+        <div className="md:col-span-2 rounded-lg shadow-2xl relative group border border-gray-800 bg-black p-2">
+          {/* Utilisation de aspect-video natif pour garantir le ratio 16:9 */}
+          <div className="w-full aspect-video overflow-hidden rounded relative">
             {isPlaying ? (
                <iframe
                width="100%"
@@ -56,7 +57,7 @@ const Music: React.FC = () => {
                frameBorder="0"
                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                allowFullScreen
-               className="w-full h-full"
+               className="absolute inset-0 w-full h-full"
              ></iframe>
             ) : (
                 <div 

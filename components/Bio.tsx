@@ -1,10 +1,8 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import SectionTitle from './SectionTitle';
 
 const Bio: React.FC = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-
   return (
     <section id="bio">
       <SectionTitle title="Bio" subtitle="AU DÉBUT..." />
@@ -18,35 +16,31 @@ const Bio: React.FC = () => {
             </p>
         </div>
         
-        {/* Style exact match with Music.tsx */}
-        <div className="md:col-span-1 aspect-w-16 aspect-h-9 rounded-lg shadow-lg relative group border border-gray-800 bg-black p-2">
-          <div className="w-full h-full overflow-hidden rounded relative">
-             {isPlaying ? (
+        {/* Modification de la taille sur mobile (w-64 centré) et plein écran relatif sur desktop (md:w-full) */}
+        <div className="md:col-span-1 w-64 sm:w-80 md:w-full mx-auto relative group">
+          
+          {/* Conteneur avec effet "Vieux Film" : Bordure épaisse, fond noir */}
+          <div className="relative rounded-lg overflow-hidden border-4 border-gray-900 shadow-2xl bg-black transform rotate-1 hover:rotate-0 transition-transform duration-500">
+            
+            {/* Vignette pour effet vieilli (ombre intérieure sombre sur les bords) */}
+            <div className="absolute inset-0 z-20 pointer-events-none shadow-[inset_0_0_40px_rgba(0,0,0,0.9)]"></div>
+            
+            {/* Calque de bruit statique léger pour simuler le grain de pellicule */}
+            <div className="absolute inset-0 z-10 pointer-events-none opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+
+            <div className="aspect-w-16 aspect-h-9">
                <iframe
                width="100%"
                height="100%"
-               src="https://www.youtube.com/embed/U3tsXwTQ-d0?autoplay=1&rel=0"
+               // Autoplay + Mute (obligatoire pour autoplay mobile) + Loop (playlist=ID nécessaire pour boucler un embed unique)
+               src="https://www.youtube.com/embed/U3tsXwTQ-d0?autoplay=1&mute=1&loop=1&playlist=U3tsXwTQ-d0&controls=0&rel=0&modestbranding=1&disablekb=1&fs=0"
                title="Kipukipet Bio Video"
                frameBorder="0"
                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowFullScreen
-               className="w-full h-full"
+               // Filtres CSS : Grayscale (N&B), Sepia (Vieilli), Contrast (Film), Brightness (Sombre)
+               className="w-full h-full object-cover pointer-events-none grayscale contrast-125 sepia-[0.4] brightness-90"
              ></iframe>
-             ) : (
-                <div 
-                    className="cursor-pointer w-full h-full relative"
-                    onClick={() => setIsPlaying(true)}
-                >
-                    <img 
-                        src="https://img.youtube.com/vi/U3tsXwTQ-d0/hqdefault.jpg" 
-                        alt="Bio Video Thumbnail"
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                        <svg className="w-16 h-16 text-white/80 group-hover:text-white transition-all duration-300 transform group-hover:scale-110" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd"></path></svg>
-                    </div>
-                </div>
-             )}
+            </div>
           </div>
         </div>
       </div>
