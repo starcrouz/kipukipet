@@ -12,21 +12,21 @@ export const concerts = [
     title: 'Koncert Apéral',
     location: 'CHEZ SONIA',
     past: true,
-    imageUrl: 'https://picsum.photos/seed/concert2/600/400?grayscale',
+    imageUrl: 'https://lh3.googleusercontent.com/pw/AP1GczNMGUrUC0Ep3BNoURoZug8NKXTECrresXOErPow85JuRtYucDLeVVsOl761q6bjl0FbDIjh742kXag9gFMAJGLeV5yJg_PUXbs6tYSlXgpBWcazOS7V11JMQEtUx0v_9AiBA9-4SvM2G9qy-mBwE-P2MLfJ260NGYgyLNwoRUYMVXjvMEQ46Jz1RFiseIB561QA8V5105a0mXIsR3WPl4LjXeeD4V8ii509JCyxljTkkT69UghvpJ-iZJuArIj8sc7MUYUPEwivuJ18d95lwA1fzGObp5DaEO-FNDnOTwb5Vhkn8eA-anl1tkHuuYrHoqPsrCn9NAocBSt-1vWatUtbe1by9RFi59eoQMZ-UVteKmW3LZPEexrE0n0WbZ1QklcTrlAiKZDNVB6V8xYl2-LIfIIiQHVM_vjwBzHxYZRfhBn9uXtSel09yfud0p2rHuZe1sOmWA5CjCzxACegivla5cD7Aj_4N9Qt22z8NaiZFrwmV89LnHzUtcoh-xyliWKl6cginNCOQh4AeE761FSM4AbggLoWir7TdWjeBfGZLkt5k22cUl7VWRrvTt5dkVVMuo3l-Urk8C4-CTuU-wyxaVTbxPbyb856vHF7YVQSZGRfMg4VIjJcze9dNIcXVqL5Lp2LhePk1dliC15VC0DMGpdYLSEdxjC4MHcTKPasFqlgRRVht0Pe6z_yE7f_z-uM4uUKgK0rpTBC6zHTDpSJBrU0WoVz2wL7sI6NXaKLuZwpjblrJNEr3Hxhraex_T_GLg6ErJK_BRMOvdeVnzskUXMgSt1cWnzQ_DNCohS-A554gSGBLe-LjU7iTDK6LbCZRqv5rUqDplc5WC2KM14T2BKplFch15EuZa8qVYlaF_ry4mXwiNW_Ufwsk2bL5DKPYJXnQXpsj4h4j30oW52L56kz6kC_s0ItyWlly23SV2IVL4Mbq2-ZXh9eja1rbWKvB2Jsn5O94c8ORuqjdUEVeBVZr350k3nJZBhUIdo88BiruA=w1440-h1080-no?authuser=0',
   },
   {
     date: '24.05.2024',
     title: 'Koncert à la plage',
     location: 'CHEZ MARTINE',
     past: true,
-    imageUrl: 'https://picsum.photos/seed/concert3/600/400?grayscale',
+    imageUrl: 'https://lh3.googleusercontent.com/gps-cs-s/AG0ilSySNBNTtkgEtkJFmnTDWsLUlrXd29X9BkWUXNd-i8T149iGGOTHl-xOg11MgMlpnaBwH5fvPqFG-y1_6yR1mG_W8-y0fT-A3WhXIT0hsl3sTESstiYY3URGrSnhKvK1CTbxx24=w1080-h624-n-k-no',
   },
   {
     date: '15.02.2023',
     title: 'Scène Ouverte',
     location: 'A L\'UTOPIA',
     past: true,
-    imageUrl: 'https://picsum.photos/seed/concert4/600/400?grayscale',
+    imageUrl: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/94/99/c7/credit-photo-philippe.jpg?w=1000&h=-1&s=1',
   },
 ];
 

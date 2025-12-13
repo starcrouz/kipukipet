@@ -20,21 +20,26 @@ const Gallery: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4">
         {/* Container carré (1:1) pour servir de placeholder uniforme */}
         <div className="relative w-full aspect-square overflow-hidden rounded-xl shadow-2xl bg-black border border-gray-800">
-          {galleryImages.map((img, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out flex items-center justify-center p-2 ${
-                index === currentImageIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
-              }`}
-            >
-              {/* object-contain assure que l'image est vue en entier sans être coupée */}
-              <img
-                src={img.src}
-                alt={`Galerie image ${index + 1}`}
-                className="max-w-full max-h-full object-contain"
-              />
-            </div>
-          ))}
+          
+          {/* Slider Container */}
+          <div 
+            className="flex h-full transition-transform duration-1000 ease-in-out"
+            style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+          >
+            {galleryImages.map((img, index) => (
+              <div
+                key={index}
+                className="min-w-full h-full flex items-center justify-center p-2"
+              >
+                {/* object-contain assure que l'image est vue en entier sans être coupée */}
+                <img
+                  src={img.src}
+                  alt={`Galerie image ${index + 1}`}
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            ))}
+          </div>
           
           {/* Indicateurs de position */}
           <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center space-x-2">
