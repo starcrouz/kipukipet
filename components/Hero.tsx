@@ -9,10 +9,15 @@ const Hero: React.FC = () => {
     setBgAnimation(animationClass);
   }, []);
 
+  const scrollToNext = () => {
+    const nextSection = document.getElementById('dates');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    // pointer-events-none on the section so the background doesn't block clicks (if visible/transparent)
     <section className="h-screen min-h-[600px] flex items-center justify-center relative overflow-hidden pointer-events-none">
-      {/* Background Image */}
       <div 
         className={`absolute inset-0 bg-cover bg-no-repeat md:bg-fixed md:bg-center ${bgAnimation} md:animate-none`}
         style={{
@@ -22,7 +27,6 @@ const Hero: React.FC = () => {
 
       <div className="absolute inset-0 bg-black/60"></div>
       
-      {/* Content needs pointer-events-auto to allow text selection */}
       <div className="relative z-10 text-center text-white flex flex-col items-center animate-fade-in w-full px-4 pointer-events-auto">
         <h1 className="font-montserrat text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-widest uppercase mb-4">
           Koncerts mal barrés
@@ -35,6 +39,15 @@ const Hero: React.FC = () => {
           Le groupe qui met les gaz
         </p>
         <div className="w-32 md:w-48 h-1 bg-amber-400 mt-8"></div>
+      </div>
+
+      {/* Flèche vers le bas */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 pointer-events-auto cursor-pointer" onClick={scrollToNext}>
+        <div className="animate-bounce flex flex-col items-center">
+            <svg className="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7-7-7m14-8l-7 7-7-7" />
+            </svg>
+        </div>
       </div>
     </section>
   );

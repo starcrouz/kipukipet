@@ -5,8 +5,8 @@ import SectionTitle from './SectionTitle';
 const videos = [
   { id: 'pVD5OV8WBLg', title: 'Whisperz (mix Misirlou & Zobi la mouche)' },
   { id: '2M82MegNOI4', title: 'Poupée (Serge Gainsbourg)' },
-  { id: 'c82HESiOTEU', title: 'Dominique (Soeur Sourire)' },
-  { id: 'I1-av8K1D_g', title: 'au Bomby\'s Café' },
+  { id: 'I1-av8K1D_g', title: 'au Bomby\'s Café' }, // Anciennement 4e
+  { id: 'c82HESiOTEU', title: 'Dominique (Soeur Sourire)' }, // Anciennement 3e
   { id: 'jucwIbsIQaI', title: 'Zug (17 hippies/ The Clash)' },
   { id: 'XzS8aI3620c', title: 'Toxic (Britney Spears)' },
   { id: '6oPgle7nk0M', title: 'Mix' }
@@ -20,7 +20,6 @@ const Music: React.FC = () => {
   const startInterval = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = window.setInterval(() => {
-      // Ne change pas automatiquement si la vidéo est en cours de lecture
       if (!isPlaying) {
         setCurrentIndex(prevIndex => (prevIndex + 1) % videos.length);
       }
@@ -36,8 +35,20 @@ const Music: React.FC = () => {
 
   const handleVideoSelect = (index: number) => {
     setCurrentIndex(index);
-    setIsPlaying(false); // Reset player to thumbnail when changing video
+    setIsPlaying(false);
     startInterval(); 
+  };
+
+  const nextVideo = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentIndex(prev => (prev + 1) % videos.length);
+    setIsPlaying(false);
+  };
+
+  const prevVideo = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentIndex(prev => (prev - 1 + videos.length) % videos.length);
+    setIsPlaying(false);
   };
 
   return (
@@ -46,8 +57,26 @@ const Music: React.FC = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Colonne Vidéo */}
         <div className="md:col-span-2 rounded-lg shadow-2xl relative group border border-gray-800 bg-black p-2">
-          {/* Utilisation de aspect-video natif pour garantir le ratio 16:9 */}
           <div className="w-full aspect-video overflow-hidden rounded relative">
+            
+            {/* Flèches de navigation sur la vidéo */}
+            {!isPlaying && (
+              <>
+                <button 
+                  onClick={prevVideo}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/50 hover:bg-amber-400 text-white hover:text-black transition-all opacity-0 group-hover:opacity-100"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <button 
+                  onClick={nextVideo}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/50 hover:bg-amber-400 text-white hover:text-black transition-all opacity-0 group-hover:opacity-100"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                </button>
+              </>
+            )}
+
             {isPlaying ? (
                <iframe
                width="100%"
