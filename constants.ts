@@ -39,6 +39,7 @@ export const galleryImages = [
 ];
 
 export const posters = [
+  'https://i.imgur.com/vxU66ez.jpeg',
   'https://lh3.googleusercontent.com/rHiCZ9HwGKxQ6TbXAOkYQ6xA9NJIrp-BK2oUzRgTDUF1xrelKL879uJE7V7EvoFqUTRLIqZFmRpPPK38228RqVsUyNnjal0=s1600',
   'https://lh3.googleusercontent.com/ofJhEEsZkDpbTC-sv86aWQteOw5p9cxPpUXThbpTCUVRCKVi8tzcx7b4WRdFKYfRloAdxFoxVdIlUOBdQs1pJgMSZRnydsM=s1600',
   'https://lh3.googleusercontent.com/hEMYnzZvZQMhkZlbd-TR9Eu4q2wms2Dt_f3KlFgZLl2x5XRs8cPU-GGOXMVWeoj7_TsVzLKxohZy43y3o5wBqx4uWQ6DAQA=s1600',
