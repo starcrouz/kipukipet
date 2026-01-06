@@ -66,9 +66,13 @@ const Header: React.FC = () => {
     setIsMenuOpen(false);
 
     // Smooth scroll
-    const element = document.querySelector(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (id === '#') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.querySelector(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
 
     // Re-enable listener after animation

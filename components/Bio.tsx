@@ -26,7 +26,7 @@ const Bio: React.FC = () => {
             <div className="absolute inset-0 z-20 pointer-events-none shadow-[inset_0_0_40px_rgba(0,0,0,0.9)]"></div>
             
             {/* Calque de bruit statique léger pour simuler le grain de pellicule */}
-            <div className="absolute inset-0 z-10 pointer-events-none opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+            <div className="absolute inset-0 z-10 pointer-events-none opacity-20 bg-[url('/assets/images/bio-stardust.png')]"></div>
 
             {/* Utilisation de aspect-video natif et relative/absolute pour l'iframe */}
             <div className="w-full aspect-video relative">

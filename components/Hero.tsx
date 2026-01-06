@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
       <div 
         className={`absolute inset-0 bg-cover bg-no-repeat md:bg-fixed md:bg-center ${bgAnimation} md:animate-none`}
         style={{
-          backgroundImage: "url('https://lh3.googleusercontent.com/-rDC-pEXgsCYN90rs9Ajxvoo5508o3YqBfjqlqQJ6IPU8l-FUV0I1-r5bhqI75MC_DrVKVxNsOKstlRIQQ=s1600')"
+          backgroundImage: "url('/assets/images/hero-bg.jpg')"
         }}
       ></div>
 
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
         <h1 className="font-montserrat text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-widest uppercase mb-4">
           Koncerts mal barrés
         </h1>
-        <img src="https://lh3.googleusercontent.com/t_r2zZwx2HLLzrI9SclgSkQJm6YkZMHfOHb0gLrz8VPHVcvbyAGB_o6aLfL6PrVD-BPHSNTIB3DCWlmZ=s360" alt="Kipukipet Picto" className="h-16 w-16 md:h-24 md:w-24 my-6"/>
+        <img src="/assets/images/hero-picto.png" alt="Kipukipet Picto" className="h-16 w-16 md:h-24 md:w-24 my-6"/>
         <p className="font-montserrat text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-widest uppercase">
           Kipukipet
         </p>
