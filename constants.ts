@@ -10,7 +10,7 @@ export const concerts = [
     date: '21.06.2025',
     title: 'Koncert Perché',
     location: 'CHEZ CAC&RICO',
-    imageUrl: '/assets/images/concert-2.jpg',
+    imageUrl: '/assets/images/koncert-perche.jpg',
   },
   {
     date: '24.05.2024',
