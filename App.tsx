@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Dates from './components/Dates';
@@ -69,6 +70,7 @@ function App() {
       </main>
       
       <Footer />
+      <Analytics />
     </div>
   );
 }
