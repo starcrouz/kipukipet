@@ -1,9 +1,15 @@
 
 export const concerts = [
   {
+    date: '19.02.2026',
+    title: 'Vachement bien !',
+    location: 'AU PIANO VACHE',
+    imageUrl: '/assets/images/concert-piano-vache.jpg',
+  },
+  {
     date: '17.01.2026',
     title: 'Apéro Koncert',
-    location: 'CHEZ EMMANUELLE & DAVID',
+    location: 'CHEZ EMMA & DAVID',
     imageUrl: '/assets/images/concert-1.jpg',
   },
   {
@@ -17,12 +23,6 @@ export const concerts = [
     title: 'Koncert à la plage',
     location: 'CHEZ MARTINE',
     imageUrl: '/assets/images/concert-3.jpg',
-  },
-  {
-    date: '15.02.2023',
-    title: 'Scène Ouverte',
-    location: 'A L\'UTOPIA',
-    imageUrl: '/assets/images/concert-4.jpg',
   },
 ];
 
@@ -40,6 +40,7 @@ export const galleryImages = [
 ];
 
 export const posters = [
+  '/assets/images/poster-2026-02-19-piano-vache.jpg',
   '/assets/images/poster-2026-01-17.jpg',
   '/assets/images/poster-2025-06-21.jpg',
   '/assets/images/poster-2025-03-30.jpg',
