@@ -28,12 +28,15 @@ export const concerts = [
 
 export const galleryImages = [
     { src: '/assets/images/gallery-1.jpg', w: 2, h: 2 },
+    { src: '/assets/images/gallery-11.jpg', w: 2, h: 2 },
     { src: '/assets/images/gallery-2.jpg', w: 1, h: 2 },
     { src: '/assets/images/gallery-3.jpg', w: 1, h: 1 },
     { src: '/assets/images/gallery-4.jpg', w: 1, h: 1 },
+    { src: '/assets/images/gallery-12.jpg', w: 2, h: 2 },
     { src: '/assets/images/gallery-5.jpg', w: 1, h: 2 },
     { src: '/assets/images/gallery-6.jpg', w: 2, h: 2 },
     { src: '/assets/images/gallery-7.jpg', w: 1, h: 1 },
+    { src: '/assets/images/gallery-13.jpg', w: 2, h: 2 },
     { src: '/assets/images/gallery-8.jpg', w: 1, h: 1 },
     { src: '/assets/images/gallery-9.jpg', w: 2, h: 1 },
     { src: '/assets/images/gallery-10.png', w: 2, h: 2 },
