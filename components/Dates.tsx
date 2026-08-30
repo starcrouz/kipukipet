@@ -2,6 +2,20 @@ import React, { useRef, useState, useEffect } from 'react';
 import SectionTitle from './SectionTitle';
 import { concerts } from '../constants';
 
+const isUpcoming = (dateStr: string): boolean => {
+  const parts = dateStr.split('.');
+  if (parts.length === 3) {
+    const day = parseInt(parts[0], 10);
+    const month = parseInt(parts[1], 10) - 1;
+    const year = parseInt(parts[2], 10);
+    const concertDate = new Date(year, month, day, 23, 59, 59, 999);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return concertDate.getTime() >= today.getTime();
+  }
+  return false;
+};
+
 const Dates: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -105,26 +119,41 @@ const Dates: React.FC = () => {
           ref={scrollContainerRef}
           className="flex gap-4 lg:gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth pb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
         >
-          {concerts.map((concert, index) => (
-            <div
-              key={index}
-              className="group/card relative overflow-hidden rounded-lg shadow-lg aspect-[4/3] flex-shrink-0 w-[82%] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] snap-start border border-gray-800/80"
-            >
-              <img
-                src={concert.imageUrl}
-                alt={concert.title}
-                className="w-full h-full object-cover transition-all duration-500 grayscale group-hover/card:grayscale-0 group-hover/card:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/60 group-hover/card:bg-black/75 transition-colors"></div>
-              <div className="absolute inset-0 p-4 md:p-5 flex flex-col justify-end">
-                <h3 className="font-montserrat text-xl lg:text-2xl font-bold text-white group-hover/card:text-amber-400 transition-colors">
-                  {concert.date}
-                </h3>
-                <p className="text-md lg:text-lg mt-1 font-semibold text-gray-100">{concert.title}</p>
-                <p className="text-sm lg:text-base text-gray-300">{concert.location}</p>
+          {concerts.map((concert, index) => {
+            const upcoming = isUpcoming(concert.date);
+            return (
+              <div
+                key={index}
+                className="group/card relative overflow-hidden rounded-lg shadow-lg aspect-[4/3] flex-shrink-0 w-[82%] sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] snap-start border border-gray-800/80"
+              >
+                <img
+                  src={concert.imageUrl}
+                  alt={concert.title}
+                  className={`w-full h-full object-cover transition-all duration-500 ${
+                    upcoming ? 'grayscale-0' : 'grayscale group-hover/card:grayscale-0'
+                  } group-hover/card:scale-110`}
+                />
+                <div
+                  className={`absolute inset-0 transition-colors ${
+                    upcoming
+                      ? 'bg-black/40 group-hover/card:bg-black/60'
+                      : 'bg-black/60 group-hover/card:bg-black/75'
+                  }`}
+                ></div>
+                <div className="absolute inset-0 p-4 md:p-5 flex flex-col justify-end">
+                  <h3
+                    className={`font-montserrat text-xl lg:text-2xl font-bold transition-colors ${
+                      upcoming ? 'text-amber-400' : 'text-white group-hover/card:text-amber-400'
+                    }`}
+                  >
+                    {concert.date}
+                  </h3>
+                  <p className="text-md lg:text-lg mt-1 font-semibold text-gray-100">{concert.title}</p>
+                  <p className="text-sm lg:text-base text-gray-300">{concert.location}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Système de puces (Bullets pagination) */}

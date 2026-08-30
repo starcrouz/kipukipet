@@ -61,6 +61,7 @@ export const galleryImages = [
 ];
 
 export const posters = [
+  '/assets/images/poster-2026-05-15-pouillade.jpg',
   '/assets/images/poster-2026-02-19-piano-vache.jpg',
   '/assets/images/poster-2026-01-17.jpg',
   '/assets/images/poster-2025-06-21.jpg',
