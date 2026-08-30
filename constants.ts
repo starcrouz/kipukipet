@@ -86,7 +86,7 @@ export const concerts = [
   },
   {
     date: '09.06.2018',
-    title: 'Keupon ki part, kinporte…',
+    title: 'Keupon ki part, kimporte…',
     location: 'ANNI RIRI',
     imageUrl: '/assets/images/concert-anni-riri.jpg',
   },
