@@ -81,14 +81,14 @@ const Dates: React.FC = () => {
   return (
     <section id="dates" className="select-none overflow-hidden">
       <SectionTitle title="Nos Dates" subtitle="KONCERTS" />
-      <p className="text-center text-gray-400 -mt-10 mb-8 max-w-md mx-auto px-4">
+      <p className="text-center text-gray-400 -mt-10 mb-3 max-w-md mx-auto px-4">
         Nos concerts à venir et une sélection de nos concerts passés
       </p>
 
       {/* Conteneur Éventail */}
       <div 
         ref={containerRef}
-        className="relative w-full max-w-6xl mx-auto h-[390px] sm:h-[460px] md:h-[520px] flex items-center justify-center"
+        className="relative w-full max-w-6xl mx-auto h-[340px] sm:h-[400px] md:h-[450px] flex items-center justify-center"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -146,7 +146,7 @@ const Dates: React.FC = () => {
               isVisible = Math.abs(diff) <= 2;
               if (!isVisible) return null;
 
-              rotationDeg = diff * 7.5; // cartes de gauche inclinées à gauche, centre 0°, droite à droite
+              rotationDeg = diff * 7.5;
               const baseTranslateY = Math.abs(diff) * 12;
               liftY = isActive ? baseTranslateY - 14 : isHovered ? baseTranslateY - 8 : baseTranslateY;
               translateX = `calc(${diff} * 46px)`;
@@ -248,7 +248,7 @@ const Dates: React.FC = () => {
       </div>
 
       {/* Système de puces (Bullets Navigation) */}
-      <div className="flex flex-wrap justify-center items-center gap-2 max-w-xl mx-auto mt-5 sm:mt-6 px-4">
+      <div className="flex flex-wrap justify-center items-center gap-2 max-w-xl mx-auto mt-2.5 sm:mt-3 px-4">
         {concerts.map((concert, index) => {
           const isActive = activeIndex === index;
           const upcoming = isUpcoming(concert.date);
@@ -268,11 +268,6 @@ const Dates: React.FC = () => {
             />
           );
         })}
-      </div>
-
-      {/* Compteur et indication */}
-      <div className="text-center mt-3 text-xs sm:text-sm text-gray-400 px-4">
-        <span className="text-amber-400 font-semibold">{activeIndex + 1}</span> / {totalConcerts} concerts &bull; Glissez ou utilisez les flèches
       </div>
     </section>
   );
