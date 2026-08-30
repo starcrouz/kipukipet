@@ -1,6 +1,18 @@
 
 export const concerts = [
   {
+    date: '05.09.2026',
+    title: 'Koncert épatant',
+    location: 'CHEZ PATEMMA',
+    imageUrl: '/assets/images/concert-patemma.jpg',
+  },
+  {
+    date: '15.05.2026',
+    title: 'Didukipet',
+    location: 'À LA POUILLADE',
+    imageUrl: '/assets/images/concert-pouillade.jpg',
+  },
+  {
     date: '19.02.2026',
     title: 'Vachement bien !',
     location: 'AU PIANO VACHE',
@@ -17,6 +29,12 @@ export const concerts = [
     title: 'Koncert Perché',
     location: 'CHEZ CAC&RICO',
     imageUrl: '/assets/images/koncert-perche.jpg',
+  },
+  {
+    date: '30.03.2025',
+    title: 'Koncert Dominikal',
+    location: 'CHEZ SONIA H',
+    imageUrl: '/assets/images/concert-soniah.jpg',
   },
   {
     date: '24.05.2024',
