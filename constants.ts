@@ -42,6 +42,54 @@ export const concerts = [
     location: 'CHEZ MARTINE',
     imageUrl: '/assets/images/concert-3.jpg',
   },
+  {
+    date: '13.05.2024',
+    title: 'Koncert de la rose',
+    location: 'CHEZ LEILA',
+    imageUrl: '/assets/images/concert-leila.jpg',
+  },
+  {
+    date: '15.02.2023',
+    title: 'Koncert Ouvert',
+    location: "À L'UTOPIA",
+    imageUrl: '/assets/images/concert-utopia.jpg',
+  },
+  {
+    date: '18.06.2022',
+    title: 'Koncert étuvé',
+    location: 'CHEZ PATEMMA',
+    imageUrl: '/assets/images/concert-patemma-2022.jpg',
+  },
+  {
+    date: '25.01.2020',
+    title: 'Koncert alternatif',
+    location: 'AU THEATRE DE VERRE',
+    imageUrl: '/assets/images/concert-theatre-de-verre.jpg',
+  },
+  {
+    date: '12.04.2019',
+    title: 'Koncert barré',
+    location: "AU BOMBY'S",
+    imageUrl: '/assets/images/concert-bombys.jpg',
+  },
+  {
+    date: '06.04.2019',
+    title: 'Apéro-Koncert',
+    location: 'CHEZ BARBALARIC',
+    imageUrl: '/assets/images/concert-barbalaric.jpg',
+  },
+  {
+    date: '02.12.2018',
+    title: 'Apéro-Koncert',
+    location: 'CHEZ FRED',
+    imageUrl: '/assets/images/concert-goutte-dor.jpg',
+  },
+  {
+    date: '09.06.2018',
+    title: 'Keupon ki part, kinporte…',
+    location: 'ANNI RIRI',
+    imageUrl: '/assets/images/concert-anni-riri.jpg',
+  },
 ];
 
 export const galleryImages = [
