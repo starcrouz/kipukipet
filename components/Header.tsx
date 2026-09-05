@@ -24,7 +24,7 @@ const Header: React.FC = () => {
         return;
       }
 
-      const sections = ['dates', 'musique', 'galerie', 'bio', 'flyers'];
+      const sections = ['dates', 'musique', 'galerie', 'bio', 'affiches'];
       let currentSection = '';
       
       // We look for the section that occupies the middle of the screen
@@ -86,7 +86,7 @@ const Header: React.FC = () => {
     { href: '#musique', label: 'Musique', id: 'musique' },
     { href: '#galerie', label: 'Galerie', id: 'galerie' },
     { href: '#bio', label: 'Bio', id: 'bio' },
-    { href: '#flyers', label: 'Flyers', id: 'flyers' },
+    { href: '#affiches', label: 'Affiches', id: 'affiches' },
   ];
 
   return (
