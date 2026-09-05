@@ -7,13 +7,29 @@ const Bio: React.FC = () => {
     <section id="bio">
       <SectionTitle title="Bio" subtitle="AU DÉBUT..." />
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
-        <div className="md:col-span-2 text-lg text-gray-300 leading-relaxed space-y-4 px-4 md:px-0">
+        <div className="md:col-span-2 text-base sm:text-lg text-gray-300 leading-relaxed space-y-4 px-4 md:px-0">
+          <p>
+            Tout a commencé sur un balcon du 13ème arrondissement de Paris, lorsqu'une tentative irrépressible de reprise de Boys Boys Boys a mal tourné. Depuis ce jour, Kipukipet s'est imposé comme le <strong className="font-bold text-white">trio débranché</strong> spécialiste de la <strong className="font-bold text-white">chanson déglinguée</strong> et du vandalisme de salon.
+          </p>
+          <div className="space-y-2">
             <p>
-                Trio acoustique de chansons déglinguées, Kipukipet est né sur un balcon du 13ème arrondissement de Paris quand Steph a proposé à Ricet de jouer Boys boys boys à l'accordéon et au Ukulélé. 
+              Notre <strong className="font-bold text-white">commando acoustique</strong> réunit trois profils hautement qualifiés&nbsp;:
             </p>
-            <p>
-                Puis Sonia les a enchantés de sa flûte magique... Et leurs covers eurent beaucoup d'enfants !
-            </p>
+            <ul className="space-y-1.5 pl-4 border-l-2 border-amber-400/50">
+              <li>
+                <span className="font-bold text-amber-400">Steph :</span> Accordéoniste de l'extrême et manieur d'une scie musicale pour les grands moments de tension dramatique.
+              </li>
+              <li>
+                <span className="font-bold text-amber-400">Ricet :</span> Gardien du groove de proximité, jonglant entre son ukulélé et sa guitare.
+              </li>
+              <li>
+                <span className="font-bold text-amber-400">So :</span> L'élément perturbateur indispensable, qui enchante (et achève) les morceaux à coups de flûte à bec et mélodica.
+              </li>
+            </ul>
+          </div>
+          <p>
+            Ensemble, nous profanons joyeusement le patrimoine de la pop mondiale avec des instruments qu'on pensait réservés aux kermesses ou aux feux de camp. Nos mashups et <strong className="font-bold text-white">reprises décomplexées</strong> ont fait beaucoup d'enfants, et la plupart sont de <strong className="font-bold text-white">turbulents</strong> petits monstres.
+          </p>
         </div>
         
         {/* Modification de la taille : utilisation de max-w-sm pour mobile (contenu) au lieu de w-64 figé */}
