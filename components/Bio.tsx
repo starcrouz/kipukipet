@@ -6,8 +6,8 @@ const Bio: React.FC = () => {
   return (
     <section id="bio">
       <SectionTitle title="Bio" subtitle="AU DÉBUT..." />
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
-        <div className="md:col-span-2 text-base sm:text-lg text-gray-300 leading-relaxed space-y-4 px-4 md:px-0">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+        <div className="text-base sm:text-lg text-gray-300 leading-relaxed space-y-4 px-4 md:px-0">
           <p>
             Tout a commencé sur un balcon du 13ème arrondissement de Paris, lorsqu'une tentative irrépressible de reprise de Boys Boys Boys a mal tourné. Depuis ce jour, Kipukipet s'est imposé comme le <strong className="font-bold text-white">trio débranché</strong> spécialiste de la <strong className="font-bold text-white">chanson déglinguée</strong> et du vandalisme de salon.
           </p>
@@ -32,8 +32,8 @@ const Bio: React.FC = () => {
           </p>
         </div>
         
-        {/* Modification de la taille : utilisation de max-w-sm pour mobile (contenu) au lieu de w-64 figé */}
-        <div className="md:col-span-1 w-full max-w-sm md:max-w-full mx-auto relative group">
+        {/* Vidéo : format préservé et centré sur mobile, taille généreuse (50% de la largeur) sur desktop */}
+        <div className="w-full max-w-sm sm:max-w-md lg:max-w-none mx-auto relative group">
           
           {/* Conteneur avec effet "Vieux Film" : Bordure retirée, coins arrondis conservés */}
           <div className="relative rounded-lg overflow-hidden shadow-2xl bg-black transform rotate-1 hover:rotate-0 transition-transform duration-500">
